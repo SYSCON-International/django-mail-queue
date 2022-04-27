@@ -37,6 +37,7 @@ class MailerMessageManager(models.Manager):
 
 
 class MailerMessage(models.Model):
+    id = models.BigAutoField(primary_key=True)
     created = models.DateTimeField(_('Created'), auto_now_add=True, auto_now=False,
                                    editable=False, null=True)
     subject = models.CharField(_('Subject'), max_length=250, blank=True)
@@ -138,6 +139,7 @@ class MailerMessage(models.Model):
 
 
 class Attachment(models.Model):
+    id = models.BigAutoField(primary_key=True)
     file_attachment = models.FileField(storage=get_storage(), upload_to=upload_to,
                                        blank=True, null=True)
     original_filename = models.CharField(default=None, max_length=250, blank=False)
