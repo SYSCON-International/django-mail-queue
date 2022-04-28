@@ -4,7 +4,7 @@ import mailqueue
 
 version = mailqueue.VERSION
 
-setup(name="django-mail-queue",
+setup(name="syscon-django-mail-queue",
       version=version,
       description="Simple Mail Queuing for Django",
       long_description=open("README.md", "r").read(),
